@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 namespace Nibble
 {
     class Game
@@ -12,14 +8,12 @@ namespace Nibble
         private Directions direction;
         private Snake snake;
         private Board board;
-        private Random random;
         private Food food;
         private int level;
         public Game()
         {
             state = GameStates.Menu;
             board = new Board(Constants.BOARD_WIDTH, Constants.BOARD_HEIGHT);
-            random = new Random();
             food = new Food();
             level = 0;
         }
@@ -119,7 +113,6 @@ namespace Nibble
         }
         public void checkKeyInput()
         {
-            
             if (state == GameStates.Started && Console.KeyAvailable)
             {
                 var key = Console.ReadKey().Key;
@@ -153,5 +146,4 @@ namespace Nibble
             state = GameStates.Menu;
         }
     }
-
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Nibble
 {
@@ -54,21 +51,21 @@ namespace Nibble
                     loadTopDownWall(height / 2, width / 4);
                     loadTopDownWall(height / 2, width - width / 4);
                     loadBotomUpWall(height / 2, width / 2);
-                break;
+                    break;
                 case 3:
                     loadTopDownWall(height / 2, width / 4);
                     loadTopDownWall(height / 2, width - width / 4);
                     loadBotomUpWall(height / 2, width / 2);
                     loadBotomUpWall(height / 2, width / 8);
-               break;
-               case 4:
+                    break;
+                case 4:
                     loadTopDownWall(height / 2, width / 4);
                     loadTopDownWall(height / 4, width / 2);
                     loadTopDownWall(height / 2, width - width / 4);
                     loadBotomUpWall(height / 2, width / 2);
                     loadBotomUpWall(height / 2, width / 8);
-               break;
-               case 5:
+                    break;
+                case 5:
                     loadTopDownWall(height / 2, width / 4);
                     loadTopDownWall(height / 4, width / 2);
                     loadTopDownWall(height / 2, width - width / 4);
@@ -76,12 +73,9 @@ namespace Nibble
                     loadBotomUpWall(height / 2, width / 8);
                     loadBotomUpWall(height / 2, width - width / 8);
                     break;
-
             }
-               
         }
-        
-       
+ 
         public void loadBotomUpWall(int lenth, int pos)
         {
             for (int i = height - 1; i > height - lenth; i--)
@@ -100,6 +94,5 @@ namespace Nibble
                 Console.Write("*");
             }
         }
-
     }
 }
